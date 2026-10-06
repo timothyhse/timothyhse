@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Timothy Chima Anugwara | OHS Engineer</title>
+
+    <meta name="description"
+          content="Timothy Chima Anugwara - OHS Engineer, HSE Engineer and WHS Professional based in Qatar.">
+
+    <meta name="keywords"
+          content="Timothy Chima Anugwara, OHS Engineer, HSE Engineer, WHS Engineer, Safety Engineer, Qatar">
+
+    <meta name="author" content="Timothy Chima Anugwara">
+
+    <style>
+        :root {
+            --navy: #0b1f3a;
+            --blue: #1261a0;
+            --light-blue: #eaf4fb;
+            --light: #f5f7fa;
+            --text: #1f2937;
+            --muted: #667085;
+            --white: #ffffff;
+            --border: #e5e7eb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: var(--navy);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            min-height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #8fd3ff;
+        }
+
+        /* HERO */
+
+        .hero {
+            background: linear-gradient(135deg, var(--navy), var(--blue));
+            color: white;
+            padding: 100px 0;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            font-weight: normal;
+            margin-bottom: 20px;
+            color: #d9efff;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 760px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button-primary {
+            background: white;
+            color: var(--navy);
+        }
+
+        .button-primary:hover {
+            background: #e8f5ff;
+        }
+
+        .button-outline {
+            border: 1px solid white;
+            color: white;
+        }
+
+        .button-outline:hover {
+            background: white;
+            color: var(--navy);
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 75px 0;
+        }
+
+        section:nth-child(even) {
+            background: var(--light);
+        }
+
+        .section-title {
+            font-size: 32px;
+            color: var(--navy);
+            margin-bottom: 35px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 55px;
+            height: 4px;
+            background: var(--blue);
+            margin-top: 10px;
+        }
+
+        /* ABOUT */
+
+        .about-text {
+            font-size: 17px;
+            max-width: 900px;
+        }
+
+        /* EXPERIENCE */
+
+        .job {
+            background: white;
+            border-left: 5px solid var(--blue);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+        }
+
+        .job h3 {
+            color: var(--navy);
+            font-size: 21px;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            font-weight: bold;
+            color: var(--blue);
+            margin-bottom: 5px;
+        }
+
+        .date {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .job ul {
+            padding-left: 20px;
+        }
+
+        .job li {
+            margin-bottom: 7px;
+        }
+
+        /* QUALIFICATIONS */
+
+        .qualification-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .qualification {
+            background: white;
+            padding: 18px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: var(--light-blue);
+            color: var(--navy);
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .project {
+            padding: 20px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        /* CONTACT */
+
+        .contact-box {
+            background: var(--navy);
+            color: white;
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .contact-box h3 {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            margin-bottom: 12px;
+        }
+
+        .contact-item a {
+            color: #8fd3ff;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #061426;
+            color: #b9c4d0;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .nav-container {
+                flex-direction: column;
+                padding: 15px 0;
+                gap: 10px;
+            }
+
+            .nav-links {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 55px 0;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <div class="container nav-container">
+
+        <div class="logo">
+            Timothy Anugwara
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#qualifications">Qualifications</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <div class="container hero-content">
+
+        <h1>Timothy Chima Anugwara</h1>
+
+        <h2>
+            OHS Engineer | HSE Engineer | WHS Professional
+        </h2>
+
+        <p>
+            Health, Safety and Occupational Safety professional with extensive
+            experience across construction, infrastructure, oil & gas and
+            facilities projects in Qatar and Nigeria.
+        </p>
+
+        <div class="buttons">
+
+            <a class="button button-primary"
+               href="mailto:timothyhse@gmail.com">
+                Contact Me
+            </a>
+
+            <a class="button button-outline"
+               href="https://www.linkedin.com/in/timothy-chima-anugwara"
+               target="_blank">
+                LinkedIn
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="container">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p class="about-text">
+            I am an OHS Engineer and HSE professional with 19+ years of
+            experience in occupational health and safety, construction safety,
+            oil & gas, infrastructure and facilities management.
+
+            My experience includes contractor and subcontractor HSE management,
+            risk assessment, audits, inspections, emergency preparedness,
+            incident investigation, permit-to-work systems and implementation
+            of safe systems of work.
+
+            I am committed to maintaining high safety standards, developing
+            positive safety cultures and ensuring that critical risks are
+            effectively controlled.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Professional Experience
+        </h2>
+
+
+        <div class="job">
+
+            <h3>OHS Engineer</h3>
+
+            <div class="company">
+                CEG INTERNATIONAL CONSULTANT – Qatar
+            </div>
+
+            <div class="date">
+                September 2026 – Present
+            </div>
+
+            <ul>
+                <li>
+                    Monitor contractor compliance with project OHS requirements
+                    and applicable regulations.
+                </li>
+
+                <li>
+                    Review method statements, risk assessments, lifting plans
+                    and emergency response plans.
+                </li>
+
+                <li>
+                    Conduct site inspections, audits and safety observations.
+                </li>
+
+                <li>
+                    Monitor high-risk activities including lifting, work at
+                    height, excavation, confined spaces, hot work and heavy
+                    equipment operations.
+                </li>
+
+                <li>
+                    Verify competency, permits, lifting arrangements and
+                    critical safety controls.
+                </li>
+
+                <li>
+                    Investigate incidents and near misses and follow up
+                    corrective actions.
+                </li>
+
+                <li>
+                    Prepare OHS reports and provide professional safety advice.
+                </li>
+            </ul>
+
+        </div>
+
+
+        <div class="job">
+
+            <h3>Senior HSE Officer</h3>
+
+            <div class="company">
+                Qatar Shell – via Teyseer Services
+            </div>
+
+            <div class="date">
+                April 2025 – September 2026
+            </div>
+
+            <ul>
+                <li>
+                    Supported implementation of HSE requirements across
+                    operational activities.
+                </li>
+
+                <li>
+                    Conducted inspections, audits and safety observations.
+                </li>
+
+                <li>
+                    Supported risk assessments, permit-to-work systems and
+                    emergency preparedness.
+                </li>
+
+                <li>
+                    Promoted safe working practices and continuous improvement.
+                </li>
+            </ul>
+
+        </div>
+
+
+        <div class="job">
+
+            <h3>HSE Engineer</h3>
+
+            <div class="company">
+                Century Times Trading & Contracting
+            </div>
+
+            <div class="date">
+                June 2018 – February 2025
+            </div>
+
+            <ul>
+                <li>
+                    Managed HSE activities for construction and infrastructure
+                    projects.
+                </li>
+
+                <li>
+                    Conducted risk assessments, inspections and audits.
+                </li>
+
+                <li>
+                    Coordinated safety training, toolbox talks and inductions.
+                </li>
+
+                <li>
+                    Monitored contractor compliance and corrective actions.
+                </li>
+            </ul>
+
+        </div>
+
+
+        <div class="job">
+
+            <h3>HSE Engineer</h3>
+
+            <div class="company">
+                Ramaco Trading & Contracting
+            </div>
+
+            <div class="date">
+                November 2013 – April 2018
+            </div>
+
+            <ul>
+                <li>
+                    Implemented HSE systems across construction projects.
+                </li>
+
+                <li>
+                    Conducted site inspections, risk assessments and safety
+                    meetings.
+                </li>
+
+                <li>
+                    Supported incident prevention and emergency response
+                    activities.
+                </li>
+            </ul>
+
+        </div>
+
+
+        <div class="job">
+
+            <h3>HSE Officer</h3>
+
+            <div class="company">
+                Petan Construction Nigeria Ltd.
+            </div>
+
+            <div class="date">
+                July 2006 – December 2012
+            </div>
+
+            <ul>
+                <li>
+                    Implemented construction safety procedures and site
+                    inspections.
+                </li>
+
+                <li>
+                    Conducted toolbox talks and worker safety inductions.
+                </li>
+
+                <li>
+                    Identified hazards and monitored corrective actions.
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- QUALIFICATIONS -->
+
+<section id="qualifications">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Qualifications & Certifications
+        </h2>
+
+        <div class="qualification-grid">
+
+            <div class="qualification">
+                B.Eng Mechanical Engineering
+            </div>
+
+            <div class="qualification">
+                NVQ OHS Level 6 Diploma
+            </div>
+
+            <div class="qualification">
+                NEBOSH International General Certificate (IGC)
+            </div>
+
+            <div class="qualification">
+                ISO 45001 Lead Auditor
+            </div>
+
+            <div class="qualification">
+                ISO 14001 Lead Auditor
+            </div>
+
+            <div class="qualification">
+                Certified IOSH Member
+            </div>
+
+            <div class="qualification">
+                Member – IIRSM
+            </div>
+
+            <div class="qualification">
+                Diploma in Environmental Management & ISO 14001
+            </div>
+
+            <div class="qualification">
+                International Diploma in Fire Safety Management
+            </div>
+
+            <div class="qualification">
+                OSHA 30-Hour Safety Training
+            </div>
+
+            <div class="qualification">
+                IOSH Managing Safely
+            </div>
+
+            <div class="qualification">
+                First Aid Certification
+            </div>
+
+            <div class="qualification">
+                LEED Environmental Certification
+            </div>
+
+            <div class="qualification">
+                CITB Scaffolding Certification
+            </div>
+
+            <div class="qualification">
+                Shell Approved Permit Issuer
+            </div>
+
+            <div class="qualification">
+                Ashghal Approved Engineer
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Core Competencies
+        </h2>
+
+        <div class="skills">
+
+            <span class="skill">OHS & HSE Management</span>
+
+            <span class="skill">QCS Compliance</span>
+
+            <span class="skill">OSHA Compliance</span>
+
+            <span class="skill">Contractor Management</span>
+
+            <span class="skill">Risk Assessment</span>
+
+            <span class="skill">HIRA / JSA</span>
+
+            <span class="skill">Safe Systems of Work</span>
+
+            <span class="skill">Permit to Work</span>
+
+            <span class="skill">LOTO & Energy Isolation</span>
+
+            <span class="skill">Confined Space Safety</span>
+
+            <span class="skill">Gas Testing</span>
+
+            <span class="skill">Work at Height</span>
+
+            <span class="skill">Fall Protection</span>
+
+            <span class="skill">Hot Work Safety</span>
+
+            <span class="skill">Fire Safety</span>
+
+            <span class="skill">Emergency Response</span>
+
+            <span class="skill">Incident Investigation</span>
+
+            <span class="skill">Safety Auditing</span>
+
+            <span class="skill">Safety Training</span>
+
+            <span class="skill">Toolbox Talks</span>
+
+            <span class="skill">HSE KPI Monitoring</span>
+
+            <span class="skill">CAPA Management</span>
+
+            <span class="skill">Oil & Gas Safety</span>
+
+            <span class="skill">Construction Safety</span>
+
+            <span class="skill">Infrastructure Safety</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Major Projects
+        </h2>
+
+        <div class="projects">
+
+            <div class="project">
+                40 Schools Project – Qatar
+            </div>
+
+            <div class="project">
+                Qatar Shell – Pearl GTL Plant
+            </div>
+
+            <div class="project">
+                Mesaieed Gasoline & Jet Storage Facilities
+            </div>
+
+            <div class="project">
+                Huzoom Lusail Infrastructure Project
+            </div>
+
+            <div class="project">
+                Qatar Rail Metro Projects
+            </div>
+
+            <div class="project">
+                Al Maha Hospital
+            </div>
+
+            <div class="project">
+                Lusail Tower Commercial 18
+            </div>
+
+            <div class="project">
+                The View Hospital
+            </div>
+
+            <div class="project">
+                Porto Arabia Tower 2B
+            </div>
+
+            <div class="project">
+                Qatar Energy Offshore Staff Accommodation
+            </div>
+
+            <div class="project">
+                Shell Bonga Oilfield – Nigeria
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Contact Me
+        </h2>
+
+        <div class="contact-box">
+
+            <h3>
+                Let's Connect
+            </h3>
+
+            <div class="contact-item">
+                <strong>Location:</strong>
+                Doha, Qatar
+            </div>
+
+            <div class="contact-item">
+                <strong>Phone:</strong>
+                <a href="tel:+97431157873">
+                    +974 3115 7873
+                </a>
+            </div>
+
+            <div class="contact-item">
+                <strong>Email:</strong>
+                <a href="mailto:timothyhse@gmail.com">
+                    timothyhse@gmail.com
+                </a>
+            </div>
+
+            <div class="contact-item">
+                <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/in/timothy-chima-anugwara"
+                   target="_blank">
+                    linkedin.com/in/timothy-chima-anugwara
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 Timothy Chima Anugwara.
+    All Rights Reserved.
+
+</footer>
+
+</body>
+</html>
